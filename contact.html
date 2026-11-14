@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact David Chinemerem Arinze.">
+  <title>Contact | David Arinze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo">David<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Let&rsquo;s talk</h1>
+        <p>Want to talk about the markets, music, or a project idea? Send me a message and I&rsquo;ll get back to you.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1.5rem">
+      <div class="container grid-2">
+        <div class="card">
+          <div class="form-success" id="form-success" role="status"></div>
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+              <span class="error" id="name-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+              <span class="error" id="email-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input type="tel" id="phone" name="phone" placeholder="08012345678" inputmode="numeric" autocomplete="tel">
+              <span class="error" id="phone-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="What would you like to say?"></textarea>
+              <span class="error" id="message-error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message &rarr;</button>
+          </form>
+        </div>
+
+        <aside class="reveal">
+          <h2>Other ways to reach me</h2>
+          <p style="color:var(--muted)">I usually reply within a day or two, unless I&rsquo;m deep in a chart or a chorus.</p>
+          <ul class="contact-info">
+            <li><span class="icon" aria-hidden="true">&#9993;</span><div><small>Email</small><a href="mailto:david.arinze@example.com">david.arinze@example.com</a></div></li>
+            <li><span class="icon" aria-hidden="true">&#9742;</span><div><small>Phone</small><a href="tel:+2348000000000">+234 800 000 0000</a></div></li>
+            <li><span class="icon" aria-hidden="true">&#9906;</span><div><small>Location</small>Nigeria</div></li>
+            <li><span class="icon" aria-hidden="true">&#127891;</span><div><small>School</small><a href="https://miva.university" target="_blank" rel="noopener">Miva Open University</a></div></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> David Chinemerem Arinze &middot; COS 106 Term Project</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

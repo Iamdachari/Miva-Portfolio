@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive academic planner: add, complete and delete tasks.">
+  <title>Academic Planner | David Arinze</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo">David<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Academic Planner</span>
+        <h1>Stay on top of coursework</h1>
+        <p>Add assignments and study tasks, tick them off when they&rsquo;re done, and delete what you no longer need. Your tasks are saved in this browser.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1.5rem">
+      <div class="container planner">
+        <aside class="card">
+          <h2 style="font-size:1.3rem">Add a task</h2>
+          <form id="task-form" novalidate>
+            <div class="form-group">
+              <label for="task-title">Task</label>
+              <input type="text" id="task-title" placeholder="e.g. Submit COS 106 project" maxlength="100">
+              <span class="error" id="task-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="task-course">Course (optional)</label>
+              <input type="text" id="task-course" placeholder="e.g. COS 106" maxlength="20">
+            </div>
+            <div class="form-group">
+              <label for="task-date">Due date (optional)</label>
+              <input type="date" id="task-date">
+            </div>
+            <div class="form-group">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">+ Add task</button>
+          </form>
+
+          <div class="stats">
+            <div class="stat"><b id="stat-total">0</b><small>Total</small></div>
+            <div class="stat"><b id="stat-active">0</b><small>To do</small></div>
+            <div class="stat"><b id="stat-done">0</b><small>Done</small></div>
+          </div>
+          <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+          <p id="progress-text" style="font-size:.85rem;color:var(--muted);margin:.5rem 0 0">0% of tasks completed</p>
+        </aside>
+
+        <div>
+          <div class="filters" role="group" aria-label="Filter tasks">
+            <button type="button" class="filter-btn active" data-filter="all">All</button>
+            <button type="button" class="filter-btn" data-filter="active">To do</button>
+            <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+            <button type="button" class="filter-btn" id="clear-completed" style="margin-left:auto">Clear completed</button>
+          </div>
+          <ul class="task-list" id="task-list" aria-live="polite"></ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> David Chinemerem Arinze &middot; COS 106 Term Project</p>
+      <ul class="footer-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/planner.js"></script>
+</body>
+</html>
